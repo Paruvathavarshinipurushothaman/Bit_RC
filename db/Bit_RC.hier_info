@@ -1,0 +1,33 @@
+|Bit_RC
+clk => t[0].IN1
+reset => reset.IN4
+q[0] <= t[1].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= t[2].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= t[3].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= t_flipflop:t3.q
+
+
+|Bit_RC|t_flipflop:t0
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Bit_RC|t_flipflop:t1
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Bit_RC|t_flipflop:t2
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Bit_RC|t_flipflop:t3
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
